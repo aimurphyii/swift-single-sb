@@ -9,12 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
+//this is subclassing, a way for classes to build off of eachother so wedont have to build from class... like extends?
+    
+//    override and super--
+    
+//    the objs from library in story board are classes of the UI kit library
+    
 
+    @IBOutlet weak var difficultySelector: UISegmentedControl!
+    
+    @IBOutlet weak var modeOfPlaySelector: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        difficultySelector.
     }
+//dont put your actions inside of viewDidLoad
+    @IBAction func buttonUpdateSettings(_ sender: Any) {
+        print("updated tap")
+    }
+    
+    @IBAction func changeModeOfPlay(_ sender: Any, _rawValue:Int) {
 
-
+        print(UISegmentedControl.Segment(_rawValue:Int))
+    }
+    
+    
 }
 
