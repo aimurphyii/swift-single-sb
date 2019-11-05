@@ -29,12 +29,11 @@ class ViewController: UIViewController {
     @IBAction func buttonUpdateSettings(_ sender: Any) {
         print("updated tap")
     }
-    
-    @IBAction func changeModeOfPlay(_ sender: Any, _rawValue:Int) {
 
-        print(UISegmentedControl.Segment(_rawValue:Int))
+    @IBAction func updateMode(_ sender: UISegmentedControl, forEvent event: UIEvent) {
+        
+        print("sender is \(UISegmentedControl.Event.RawValue.self)  and event is ")
     }
-    
     
 }
 
