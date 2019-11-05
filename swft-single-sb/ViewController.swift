@@ -18,7 +18,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var difficultySelector: UISegmentedControl!
     
-    @IBOutlet weak var modeOfPlaySelector: UISegmentedControl!
+
+    @IBOutlet weak var modeSelector: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +27,19 @@ class ViewController: UIViewController {
 //        difficultySelector.
     }
 //dont put your actions inside of viewDidLoad
-    @IBAction func buttonUpdateSettings(_ sender: Any) {
-        print("updated tap")
+    @IBAction func updateDifficulty(_ sender: UISegmentedControl, forEvent event: UIEvent) {
+        
+        print("mode is \(difficultySelector.selectedSegmentIndex)  0 normal, 1 hard, 2 legendary)")
     }
+
 
     @IBAction func updateMode(_ sender: UISegmentedControl, forEvent event: UIEvent) {
         
-        print("sender is \(UISegmentedControl.Event.RawValue.self)  and event is ")
+        print("mode is \(modeSelector.selectedSegmentIndex)  0 is blitz, 1 standard, 2 endless)")
+    }
+    
+    @IBAction func buttonUpdateSettings(_ sender: Any) {
+        print("difficulty",difficultySelector.selectedSegmentIndex, "mode", modeSelector.selectedSegmentIndex)
     }
     
 }

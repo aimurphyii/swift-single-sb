@@ -42,6 +42,9 @@
                                             <segment title="Hard"/>
                                             <segment title="Legendary"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="updateDifficulty:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="A0q-5z-9DL"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TO-RB-4Sh">
                                         <rect key="frame" x="0.0" y="122.5" width="320" height="26.5"/>
@@ -102,6 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="difficultySelector" destination="aBW-dA-HZh" id="rG8-Pz-3ia"/>
+                        <outlet property="modeSelector" destination="0Vf-zR-7ca" id="DZp-o9-TVG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
